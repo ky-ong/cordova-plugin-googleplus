@@ -2,7 +2,7 @@
 <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
         xmlns:android="http://schemas.android.com/apk/res/android"
         id="nl.x-services.plugins.googleplus"
-        version="1.1.1">
+        version="1.1.2">
 
   <name>Google+</name>
 
@@ -29,10 +29,7 @@
   <!-- android -->
   <platform name="android">
 
-    <!-- these give a lot of peeps trouble, esp on build.phonegap.com, so not using them -->
-    <framework src="com.google.android.gms:play-services-plus:+" />
-    <framework src="com.google.android.gms:play-services-identity:+" />
-    <!--<dependency id="cordova-plugin-googleplayservices" />-->
+    <dependency id="com.google.playservices" url="https://github.com/MobileChromeApps/google-play-services" />
 
     <config-file target="res/xml/config.xml" parent="/*">
       <feature name="GooglePlus">
@@ -115,7 +112,6 @@
     <framework src="SystemConfiguration.framework" weak="true" />
     <framework src="libz.tbd" weak="true" />
     <framework src="libz.dylib" weak="true" />
-
   </platform>
 
 </plugin>
